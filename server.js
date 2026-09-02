@@ -330,11 +330,15 @@ app.post('/api/generate-receipt', async (req, res) => {
   }
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`=========================================`);
-  console.log(`संस्कृतभारती मालवा न्यास पोर्टल`);
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Next Receipt Number: ${peekNextReceiptNumber()}`);
-  console.log(`=========================================`);
-});
+// Start server when run directly
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`=========================================`);
+    console.log(`संस्कृतभारती मालवा न्यास पोर्टल`);
+    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Next Receipt Number: ${peekNextReceiptNumber()}`);
+    console.log(`=========================================`);
+  });
+}
+
+module.exports = app;
