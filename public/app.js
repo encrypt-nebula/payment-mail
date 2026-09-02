@@ -17,10 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPaymentDoneProceed = document.getElementById('btn-payment-done-proceed');
   const btnHomeReturn = document.getElementById('btn-home-return');
 
-  // UPI interactions
+  // UPI & Bank interactions
   const btnCopyUpi = document.getElementById('btn-copy-upi');
   const upiIdString = document.getElementById('upi-id-string');
   const copyBtnText = document.getElementById('copy-btn-text');
+  const btnCopyAcc = document.getElementById('btn-copy-acc');
+  const accNoString = document.getElementById('acc-no-string');
+  const copyAccBtnText = document.getElementById('copy-acc-btn-text');
 
   // Receipt Form elements
   const receiptForm = document.getElementById('receipt-form');
@@ -157,6 +160,22 @@ document.addEventListener('DOMContentLoaded', () => {
           showToast('UPI ID प्रतिलिपिः सफला!');
           setTimeout(() => {
             if (copyBtnText) copyBtnText.textContent = 'कॉपी कुर्वन्तु';
+          }, 2500);
+        }).catch(err => {
+          showToast('प्रतिलिपि-करणे त्रुटिः');
+        });
+      });
+    }
+
+    // Account Number Copy
+    if (btnCopyAcc && accNoString) {
+      btnCopyAcc.addEventListener('click', () => {
+        const text = accNoString.textContent.trim();
+        navigator.clipboard.writeText(text).then(() => {
+          if (copyAccBtnText) copyAccBtnText.textContent = 'प्रतिलिपिः कृता (Copied!)';
+          showToast('खाता-सङ्ख्या प्रतिलिपिः सफला!');
+          setTimeout(() => {
+            if (copyAccBtnText) copyAccBtnText.textContent = 'कॉपी कुर्वन्तु';
           }, 2500);
         }).catch(err => {
           showToast('प्रतिलिपि-करणे त्रुटिः');

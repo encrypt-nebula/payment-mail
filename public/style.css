@@ -557,6 +557,10 @@ body {
   margin-bottom: 4px;
 }
 
+.bank-acc-label {
+  margin-top: 10px;
+}
+
 .upi-id-value-row {
   display: flex;
   align-items: center;
