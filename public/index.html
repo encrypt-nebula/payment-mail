@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="sa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>संस्कृतभारती, मालवा न्यास - समर्पण एवं प्राप्तिपत्र पोर्टल</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Rozha+One&family=Yatra+One&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Decorative Motifs -->
+  <div class="bg-decorations">
+    <div class="sacred-sun"></div>
+    <div class="mandala-top"></div>
+    <div class="mandala-bottom"></div>
+  </div>
+
+  <div class="app-container">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="om-symbol">ॐ</div>
+      <div class="header-main-row">
+        <div class="header-logo-wrap">
+          <img src="assets/logo.png" alt="संस्कृतभारती लोगो" class="header-logo">
+        </div>
+        <div class="header-titles">
+          <h1 class="main-title">संस्कृतभारती, मालवा न्यास</h1>
+          <p class="sub-title">॥ जयतु संस्कृतं, विश्वपोषकम् ॥</p>
+          <p class="address-tag">३०५, आराधना अपार्टमेंट, सुभाष मार्ग, इन्दौर | पंजीयन क्र. १२३९/२९.०७.२०१५</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="main-content">
+
+      <!-- ==============================================
+           VIEW 1: HOME - SELECTION (मुख्य-विकल्पौ)
+      =============================================== -->
+      <section id="view-home" class="view-section active">
+        <div class="selection-cards-grid">
+
+          <!-- Option A: Make Payment -->
+          <div class="action-card pay-card" id="card-option-pay">
+            <div class="card-icon-badge">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+                <path d="M6 15h2"></path>
+                <path d="M10 15h4"></path>
+              </svg>
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">समर्पणं कर्तुम्</h2>
+              <p class="card-desc">संस्कृतप्रसाराय तथा न्यासकार्यार्थं QR सङ्केतेन समर्पणं कुर्वन्तु</p>
+            </div>
+            <button type="button" class="btn-sanatani btn-primary" id="btn-goto-pay">
+              <span>समर्पणं करोमि</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Option B: Generate Receipt -->
+          <div class="action-card receipt-card" id="card-option-receipt">
+            <div class="card-icon-badge gold-badge">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">प्राप्तिपत्रं प्राप्तुम्</h2>
+              <p class="card-desc">पूर्वकृत-समर्पणस्य विवरणं प्रपूर्य अधिकृत-प्राप्तिपत्रं प्राप्नुवन्तु</p>
+            </div>
+            <button type="button" class="btn-sanatani btn-gold" id="btn-goto-receipt">
+              <span>प्राप्तिपत्रं प्राप्नुवन्तु</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           VIEW 2: QR PAYMENT (समर्पणार्थं QR सङ्केतः)
+      =============================================== -->
+      <section id="view-payment" class="view-section">
+        <div class="section-nav-header">
+          <button type="button" class="btn-back" id="btn-back-from-pay">
+            <span class="back-arrow">←</span> मुख्यपृष्ठम्
+          </button>
+          <h2 class="section-title">समर्पणार्थं QR सङ्केतः</h2>
+        </div>
+
+        <div class="qr-main-card">
+          <div class="sacred-card-ornament"></div>
+
+          <p class="qr-instruction">
+            कृपया अधोदत्तं QR सङ्केतं स्कैन कृत्वा वा UPI सङ्केतेन समर्पणं कुर्वन्तु
+          </p>
+
+          <div class="qr-image-wrapper">
+            <img src="assets/QR-code.png" alt="Sanskrit Bharati Malwa UPI QR Code" class="qr-image" id="qr-code-img">
+            <div class="qr-overlay-shine"></div>
+          </div>
+
+          <div class="upi-id-box">
+            <div class="upi-id-label">अधिकृत UPI ID :</div>
+            <div class="upi-id-value-row">
+              <code class="upi-id-text" id="upi-id-string">boism-9755445677@boi</code>
+              <button type="button" class="btn-copy-upi" id="btn-copy-upi" title="प्रतिलिपिः / Copy">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-btn-text">कॉपी कुर्वन्तु</span>
+              </button>
+            </div>
+            <div class="upi-name-tag">न्यास-खाता: <strong>SANSKRUT BHARTI MALVA</strong></div>
+          </div>
+
+          <div class="payment-divider">
+            <span>समर्पणानन्तरम्</span>
+          </div>
+
+          <!-- Payment Done Action Button -->
+          <div class="payment-done-action-box">
+            <p class="done-hint">समर्पणं कृतवन्तः? अधुना स्वकीयं प्राप्तिपत्रं प्राप्नुवन्तु :</p>
+            <button type="button" class="btn-sanatani btn-success-pulse" id="btn-payment-done-proceed">
+              <span class="check-icon">✓</span>
+              <span>समर्पणं सम्पन्नम्, प्राप्तिपत्रं प्राप्नुवन्तु</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           VIEW 3: RECEIPT DETAILS FORM (प्राप्तिपत्र-विवरणम्)
+      =============================================== -->
+      <section id="view-form" class="view-section">
+        <div class="section-nav-header">
+          <button type="button" class="btn-back" id="btn-back-from-form">
+            <span class="back-arrow">←</span> पृष्ठतः
+          </button>
+          <div class="form-title-wrap">
+            <h2 class="section-title">प्राप्तिपत्र-विवरणम्</h2>
+            <span class="next-receipt-badge" id="receipt-no-display">क्रमाङ्कः ००१</span>
+          </div>
+        </div>
+
+        <form id="receipt-form" class="receipt-form-card" novalidate>
+          <div class="form-banner-text">
+            कृपया यथार्थं विवरणं प्रपूर्य प्राप्तिपत्रं प्राप्नुवन्तु। एतत् प्राप्तिपत्रं भवतः ई-मेल सङ्केते अपि
+            प्रेषयिष्यते।
+          </div>
+
+          <!-- Donor Name -->
+          <div class="form-group">
+            <label for="input-name" class="form-label">
+              <span class="label-sanskrit">श्रीमान् / श्रीमती (नाम)</span>
+              <span class="required-star">*</span>
+            </label>
+            <div class="input-with-icon">
+              <span class="input-icon">👤</span>
+              <input type="text" id="input-name" name="name" class="form-input"
+                placeholder="उदा. श्री राजेश शर्मा / सौ. पूजा वर्मा" required>
+            </div>
+            <div class="field-error" id="error-name"></div>
+          </div>
+
+          <!-- Address -->
+          <div class="form-group">
+            <label for="input-address" class="form-label">
+              <span class="label-sanskrit">पत्रसङ्केतः (स्थानम् / नगरम्)</span>
+              <span class="required-star">*</span>
+            </label>
+            <div class="input-with-icon">
+              <span class="input-icon">📍</span>
+              <input type="text" id="input-address" name="address" class="form-input"
+                placeholder="उदा. १०२, साकेत नगर, इन्दौर (म.प्र.)" required>
+            </div>
+            <div class="field-error" id="error-address"></div>
+          </div>
+
+          <!-- Row: Phone & Email -->
+          <div class="form-row-2">
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="input-phone" class="form-label">
+                <span class="label-sanskrit">दूरभाषः (Mobile)</span>
+                <span class="required-star">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon">📞</span>
+                <input type="tel" id="input-phone" name="phone" class="form-input" placeholder="९८XXXXXXXX"
+                  maxlength="10" required>
+              </div>
+              <div class="field-error" id="error-phone"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="input-email" class="form-label">
+                <span class="label-sanskrit">ई-मेल (अपुसङ्केतः)</span>
+                <span class="required-star">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon">✉️</span>
+                <input type="email" id="input-email" name="email" class="form-input" placeholder="example@gmail.com"
+                  required>
+              </div>
+              <div class="field-hint">अस्मिन् ई-मेल सङ्केते प्राप्तिपत्रं प्रेषयिष्यते</div>
+              <div class="field-error" id="error-email"></div>
+            </div>
+
+          </div>
+
+          <!-- Row: Amount & PAN -->
+          <div class="form-row-2">
+
+            <!-- Amount in Rupees -->
+            <div class="form-group">
+              <label for="input-amount" class="form-label">
+                <span class="label-sanskrit">समर्पणराशिः (₹)</span>
+                <span class="required-star">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon currency-symbol">₹</span>
+                <input type="number" id="input-amount" name="amount" class="form-input amount-input"
+                  placeholder="उदा. 1200, 2500, 5100" min="1" required>
+              </div>
+              <div class="field-error" id="error-amount"></div>
+            </div>
+
+            <!-- PAN (Optional / 80G) -->
+            <div class="form-group">
+              <label for="input-pan" class="form-label">
+                <span class="label-sanskrit">PAN (आयकर-लेखा-सङ्ख्या)</span>
+                <span class="optional-tag">(80G लाभाय)</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon">💳</span>
+                <input type="text" id="input-pan" name="pan" class="form-input pan-input" placeholder="ABCDE1234F"
+                  maxlength="10">
+              </div>
+              <div class="field-error" id="error-pan"></div>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Sanskrit Number Live Converter Card -->
+          <div class="sanskrit-live-converter-card" id="converter-card">
+            <div class="converter-header">
+              <span class="converter-badge">संस्कृत-रूपान्तरणम्</span>
+              <span class="converter-info">स्वचालित-गणना</span>
+            </div>
+            <div class="converter-body">
+              <div class="converter-row">
+                <span class="converter-label">अङ्केषु (Devanagari) :</span>
+                <span class="converter-value-dev" id="live-devanagari-digits">₹०/-</span>
+              </div>
+              <div class="converter-row">
+                <span class="converter-label">अक्षरेषु (Sanskrit Words) :</span>
+                <span class="converter-value-sanskrit" id="live-sanskrit-words">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Mode & Reference Details -->
+          <div class="form-row-2">
+
+            <!-- Payment Mode -->
+            <div class="form-group">
+              <label for="select-payment-mode" class="form-label">
+                <span class="label-sanskrit">समर्पणप्रकारः</span>
+              </label>
+              <select id="select-payment-mode" name="paymentMode" class="form-select">
+                <option value="UPI / QR Code" selected>UPI / QR सङ्केतः</option>
+                <option value="अन्तर्जाल-हस्तान्तरणम् (Net Banking)">अन्तर्जाल-हस्तान्तरणम् (Net Banking / IMPS)
+                </option>
+                <option value="धनादेशः (Cheque / DD)">धनादेशः (Cheque / DD)</option>
+                <option value="नकदम् (Cash)">नकदम् (Cash)</option>
+              </select>
+            </div>
+
+            <!-- Transaction / Reference / Cheque ID -->
+            <div class="form-group">
+              <label for="input-txnid" class="form-label">
+                <span class="label-sanskrit">व्यवहार क्र. / UTR / धनादेश क्र.</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon">🔢</span>
+                <input type="text" id="input-txnid" name="txnId" class="form-input"
+                  placeholder="उदा. UPI UTR / Ref No.">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bank Name & Date -->
+          <div class="form-row-2">
+
+            <!-- Bank Name -->
+            <div class="form-group">
+              <label for="input-bank" class="form-label">
+                <span class="label-sanskrit">बैंकनाम (Bank Name)</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon">🏛️</span>
+                <input type="text" id="input-bank" name="bankName" class="form-input"
+                  placeholder="उदा. Bank of India / SBI / HDFC">
+              </div>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label for="input-date" class="form-label">
+                <span class="label-sanskrit">दिनाङ्कः (Date)</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon">📅</span>
+                <input type="text" id="input-date" name="date" class="form-input" placeholder="DD/MM/YYYY">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Receipt Preview Section -->
+          <div class="live-preview-section">
+            <div class="preview-header">
+              <span class="preview-title">📜 प्राप्तिपत्रस्य प्रत्यक्षदर्शनम् (Live Receipt Preview)</span>
+              <button type="button" class="btn-refresh-preview" id="btn-refresh-preview">⟳ नवीकरणम्</button>
+            </div>
+            <div class="canvas-wrapper">
+              <canvas id="receipt-canvas"></canvas>
+            </div>
+            <div class="preview-caption">
+              एतत् प्राप्तिपत्रं मुद्रितरूपेण ई-मेल द्वारा प्रेषयिष्यते।
+            </div>
+          </div>
+
+          <!-- Form Submit Action -->
+          <div class="form-action-wrap">
+            <button type="submit" class="btn-sanatani btn-submit-receipt" id="btn-submit-receipt">
+              <span class="btn-spinner" id="submit-spinner" style="display: none;"></span>
+              <span class="btn-icon">📩</span>
+              <span id="submit-btn-text">प्राप्तिपत्रं जनयतु एवं ई-मेल प्रेषयतु</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <div class="submit-disclaimer">
+              प्राप्तिपत्रस्य प्रतिलिपिः <strong>sbmalva@gmail.com</strong> तथा भवतः ई-मेल सङ्केते प्रेषिता भविष्यति।
+            </div>
+          </div>
+
+        </form>
+      </section>
+
+
+      <!-- ==============================================
+           VIEW 4: SUCCESS & DOWNLOAD (साफल्यम्)
+      =============================================== -->
+      <section id="view-success" class="view-section">
+        <div class="success-card">
+          <div class="success-icon-wrap">
+            <div class="sacred-check">✓</div>
+          </div>
+
+          <h2 class="success-title">॥ कृतज्ञता-स्वीकृतिः ॥</h2>
+          <p class="success-blessing">
+            भवतः समर्पणं कृतज्ञतापूर्वकं स्वीकृतम्। संस्कृतभारती मालवा न्यासस्य पक्षतः हार्दाः धन्यवादाः!<br>
+            <strong>॥ जयतु संस्कृतम्, जयतु भारतम् ॥</strong>
+          </p>
+
+          <div class="email-sent-badge-box" id="email-sent-status">
+            <span class="badge-icon">✉️</span>
+            <span id="email-status-text">प्राप्तिपत्रं भवतः ई-मेल सङ्केते तथा sbmalva@gmail.com प्रति साफल्येन
+              प्रेषितम्।</span>
+          </div>
+
+          <!-- Final Receipt Image Render -->
+          <div class="final-receipt-container">
+            <div class="final-receipt-card">
+              <img id="final-receipt-img" alt="Official Sanskrit Bharati Malwa Receipt" class="final-receipt-image">
+            </div>
+          </div>
+
+          <!-- Action Buttons (Download, Print, New) -->
+          <div class="success-actions-grid">
+            <button type="button" class="btn-sanatani btn-download" id="btn-download-receipt">
+              <span class="btn-icon">📥</span>
+              <span>प्राप्तिपत्रम् अवतरणम् (Download)</span>
+            </button>
+
+            <button type="button" class="btn-sanatani btn-print" id="btn-print-receipt">
+              <span class="btn-icon">🖨️</span>
+              <span>मुद्रणम् / PDF (Print)</span>
+            </button>
+
+            <button type="button" class="btn-sanatani btn-home-return" id="btn-home-return">
+              <span class="btn-icon">🏠</span>
+              <span>मुख्यपृष्ठं प्रति गच्छतु</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-top">
+        <div class="footer-om">ॐ</div>
+        <div class="footer-text">संस्कृतभारती, मालवा न्यास (इन्दौर)</div>
+      </div>
+      <div class="footer-bottom">
+        <span>पंजीयन क्र. १२३९/२९.०७.२०१५</span> •
+        <span>सम्पर्कः : sbmalva@gmail.com</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Notification Modal -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="sanskrit-numbers.js"></script>
+  <script src="receipt-canvas.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
