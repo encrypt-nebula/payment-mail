@@ -1,0 +1,15 @@
+{
+  "name": "sanskrit-bharati-malwa-portal",
+  "version": "1.0.0",
+  "description": "संस्कृतभारती मालवा न्यास - समर्पण एवं प्राप्तिपत्र पोर्टल",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test-sanskrit.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5"
+  }
+}
